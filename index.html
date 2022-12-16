@@ -10,9 +10,11 @@
             for(let i = 0; i < data.length; i++) {
                 let o = data[i];
                 n = document.createElement('a')
+                d = document.createElement('br')
                 n.href = o.path
                 n.innerText = o.path
                 b.appendChild(n)
+                b.appendChild(d)
 }
         }
         fetch('https://api.github.com/repos/Lachine1/some-code-from-youtube/contents',{mode:'cors'})
