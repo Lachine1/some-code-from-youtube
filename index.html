@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the files</title>
     <script defer>
-        function loop(){
+        function loop(data){
             for(let i = 0; i < data.length; i++) {
                 let o = data[i];
-                console.log(o.path);
+                n = document.createElement('a')
+                n.href = o.path
+                b.appendChild(n)
 }
         }
-        fetch('https://corsproxy.io/?'+encodeURIComponent('https://api.github.com/repos/Lachine1/some-code-from-youtube/contents/'),{mode:'cors'})
+        fetch('https://api.github.com/repos/Lachine1/some-code-from-youtube/contents',{mode:'cors'})
   .then(response => response.json())
-  .then(data => loop());
+  .then(data => loop(data));
   </script>
 </head>
-<body>
-    <ul id="ul">
-        <li></li>
-    </ul>
+<body id="b">
 </body>
 </html>
